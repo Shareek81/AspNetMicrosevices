@@ -9,6 +9,19 @@ service DiscountProtoService {
 	rpc DeleteDiscount (DeleteDiscountRequest) returns (DeleteDiscountResponse);
 }
 
+service TestProtoService {
+	rpc GetName (TestRequest) returns (TestResponse);
+}
+
+
+message TestRequest {
+	int32 id = 1;
+}
+
+message TestResponse {
+	string name = 1;
+}
+
 message GetDiscountRequest {
 	string productName = 1;	
 }
